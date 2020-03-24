@@ -61,7 +61,7 @@ userRouter.post('/todo', passport.authenticate('jwt', {session: false}), (req, r
                 if (err)
                     res.status(500).json({message: {msgBody: "Error has occured", msgError: true}});
                 else
-                    res.status(200).json({message: {msg: "Successfully Created Todo", msgError: false}})
+                    res.status(200).json({message: {msgBody: "Successfully Created Todo", msgError: false}})
             })
         }
    })
